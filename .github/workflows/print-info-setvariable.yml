@@ -1,0 +1,22 @@
+name: Print Info
+
+on:
+  push:
+    paths:
+      - file.txt
+
+jobs:
+  print_info:
+    runs-on: ubuntu-latest
+
+    env:
+      NOMBRE: "Luis"
+      APELLIDO: "Lemus"
+      HOBBY: "Desarrollo de software"
+
+    steps:
+      - name: Imprimir información Seteando Variables
+        run: |
+          echo "Nombre: $NOMBRE"
+          echo "Apellido: $APELLIDO"
+          echo "Hobby: $HOBBY"
